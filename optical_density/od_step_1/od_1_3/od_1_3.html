@@ -11,6 +11,26 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../../../style.css">
 
+    <style>
+      .file-input {
+          display: none;
+      }
+
+      .custom-button {
+          display: inline-block;
+          padding: 10px 20px;
+          background-color: #007bff;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+      }
+
+      .custom-button:hover {
+          background-color: #0056b3;
+      }
+  </style>
+    
   </head>
   <body>
 
@@ -47,11 +67,13 @@
         </div>
 
         <!-- Video Recording -->
-        <div class="text-center mt-3">
-          <input type="file" name="video" accept="video/*" capture="user"></input>
-          <button onclick="handleRecordClick()">Record Video</button>
-          <!-- <video id="videoElement" style="display: block; max-width: 100%;" controls></video>  -->
-        </div>
+        <div>
+          <input type="file" name="video" accept="video/*" capture="user" class="file-input" id="fileInput">
+          <button type="button" class="custom-button" onclick="triggerFileInput()">Record Video</button>
+      </div>
+        
+
+       
 
     </main>
 
@@ -77,10 +99,9 @@
       <!-- Custom JS -->
       <script src="main.js"></script>
       <script>
-        function handleRecordClick() {
-          const videoElement = document.getElementById('videoElement');
-          // Logic to handle recording and displaying the video goes here
+        function triggerFileInput() {
+            document.getElementById('fileInput').click();
         }
-      </script>
+    </script>
     </body>
   </html>
