@@ -46,6 +46,13 @@
             <img src="./images/Ep Tube w Annot.png" class="img-fluid rounded" alt="Description of Photo" style="width: 300px;">
         </div>
 
+        <!-- Video Recording -->
+        <div class="text-center mt-3">
+          <input type="file" name="video" accept="video/*" capture="user"></input>
+          <button onclick="handleRecordClick()">Record Video</button>
+          <!-- <video id="videoElement" style="display: block; max-width: 100%;" controls></video>  -->
+        </div>
+
     </main>
 
 
@@ -69,5 +76,11 @@
   
       <!-- Custom JS -->
       <script src="main.js"></script>
+      <script>
+        function handleRecordClick() {
+          const videoElement = document.getElementById('videoElement');
+          // Logic to handle recording and displaying the video goes here
+        }
+      </script>
     </body>
   </html>
