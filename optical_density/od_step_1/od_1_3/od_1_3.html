@@ -11,25 +11,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../../../style.css">
 
-    <style>
-      .file-input {
-          display: none;
-      }
-
-      .custom-button {
-          display: inline-block;
-          padding: 10px 20px;
-          background-color: #007bff;
-          color: white;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-      }
-
-      .custom-button:hover {
-          background-color: #0056b3;
-      }
-  </style>
+    
     
   </head>
   <body>
@@ -66,11 +48,7 @@
             <img src="./images/Ep Tube w Annot.png" class="img-fluid rounded" alt="Description of Photo" style="width: 300px;">
         </div>
 
-        <!-- Video Recording -->
-        <div>
-          <input type="file" name="video" accept="video/*" capture="user" class="file-input" id="fileInput">
-          <button type="button" class="custom-button" onclick="triggerFileInput()">Record Video</button>
-      </div>
+        
         
 
        
@@ -98,10 +76,6 @@
   
       <!-- Custom JS -->
       <script src="main.js"></script>
-      <script>
-        function triggerFileInput() {
-            document.getElementById('fileInput').click();
-        }
-    </script>
+      
     </body>
   </html>
