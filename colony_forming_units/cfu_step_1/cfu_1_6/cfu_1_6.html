@@ -32,6 +32,25 @@
         .custom-button:hover {
             background-color: red;
         }
+
+        .custom-button-container {
+            background-color: red;
+            display: inline-block;
+            padding: 2px; /* Adjust as needed to blend */
+            border-radius: 5px; /* Match the button's border-radius */
+        }
+
+        .custom-button-container button {
+            background-color: red;
+            color: white;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .custom-button-container button:hover {
+            background-color: darkred;
+        }
     </style>
 
 </head>
@@ -99,14 +118,11 @@
             <img src="./images/serial dilution 2.png" class="img-fluid rounded" alt="Description of Photo" style="width: 300px;">
         </div>
 
-        
-
         <!-- Video Recording -->
-        <div class="pt-3 text-center">
+        <div class="pt-3 text-center custom-button-container">
             <input type="file" name="video" accept="video/*" capture="user" class="file-input" id="fileInput" hf-use-description="true" hf-show-text="true" hf-no-number="true" tabindex="0">
-            <label for="fileInput" class="custom-button" hf-command="RECORD VIDEO" tabindex="0"><button>Record Video</button> </label>
+            <label for="fileInput" hf-command="RECORD VIDEO" tabindex="0"><button class="custom-button">Record Video</button> </label>
         </div>
-
 
     </main>
 
@@ -147,4 +163,3 @@
 
 </body>
 </html>
-
