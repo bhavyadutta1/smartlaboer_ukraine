@@ -101,8 +101,8 @@
 
         <!-- Video Recording -->
         <div class="pt-3 text-center">
-            <input type="file" name="video" accept="video/*" capture="user" class="file-input" id="fileInput">
-            <button type="button" class="custom-button" onclick="triggerFileInput()">Record Video </button>
+            <input type="file" name="video" accept="video/*" capture="user" class="file-input" id="fileInput" style="display: none;">
+            <a href="javascript:void(0);" class="custom-button" id="recordVideoLink">Record Video</a>
         </div>
 
     </main>
@@ -136,9 +136,9 @@
     <!-- Custom JS -->
     <script src="main.js"></script>
     <script>
-        function triggerFileInput() {
+        document.getElementById('recordVideoLink').addEventListener('click', function() {
             document.getElementById('fileInput').click();
-        }
+        });
     </script>
 </body>
 </html>
