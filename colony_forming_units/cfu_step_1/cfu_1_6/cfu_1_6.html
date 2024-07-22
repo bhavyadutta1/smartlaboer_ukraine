@@ -99,11 +99,14 @@
             <img src="./images/serial dilution 2.png" class="img-fluid rounded" alt="Description of Photo" style="width: 300px;">
         </div>
 
+        
+
         <!-- Video Recording -->
         <div class="pt-3 text-center">
-            <input type="file" name="video" accept="video/*" capture="user" class="file-input" id="fileInput" hf-use-description="true" hf-show-text="true" hf-no-number="true">
-            <label for="fileInput" class="custom-button"><button>Record Video</button> </label>
+            <input type="file" name="video" accept="video/*" capture="user" class="file-input" id="fileInput" hf-use-description="true" hf-show-text="true" hf-no-number="true" tabindex="0">
+            <label for="fileInput" class="custom-button" hf-command="RECORD VIDEO" tabindex="0"><button>Record Video</button> </label>
         </div>
+
 
     </main>
 
@@ -135,11 +138,13 @@
 
     <!-- Custom JS -->
     <script src="main.js"></script>
+    
     <script>
-        document.getElementById('recordVideoLink').addEventListener('click', function() {
+        document.querySelector('.custom-button').addEventListener('click', function() {
             document.getElementById('fileInput').click();
         });
     </script>
+
 </body>
 </html>
 
